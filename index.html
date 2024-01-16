@@ -20,7 +20,7 @@
 </head>
 <body>
 
-<form id="contactForm">
+<form id="contactForm" method="POST">
     <div id="step1">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
@@ -62,8 +62,8 @@
         // and handle the email sending on the server side.
         
         // For simplicity, let's assume there's a server endpoint "/submit-form" that handles this.
-
-        fetch('/submit-form', {
+        
+        fetch('http://localhost:3000/submit-form', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
